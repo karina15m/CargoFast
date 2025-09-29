@@ -1,0 +1,209 @@
+/*
+ * Ім'я виконавця: Каріна Мурженко
+ * Навчальна група: ФЕМП 5-3з
+ * Файл: styles.css
+ * Оновлено: 5 колонок для сітки відділень.
+ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-bottom: 70px; 
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* ЗМІНА: Заголовок "Служба Доставки "CargoFast"" чорного кольору */
+header h1 {
+    color: #000000; 
+    margin: 0; 
+}
+
+/* ЗМІНА: Інформація про розробника (зверху на всіх сторінках) */
+.developer-info {
+    text-align: center;
+    background-color: #ffe0b2;
+    color: #444;
+    padding: 5px 0; 
+    font-size: 0.8em; /* Менший шрифт */
+    font-weight: 500;
+    border-bottom: 1px solid #ffcc80;
+}
+
+
+/* --- НАВІГАЦІЯ --- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Іконки в меню */
+nav a span.icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+
+/* --- ОСНОВНИЙ КОНТЕНТ --- */
+.container {
+    padding: 30px 20px;
+    max-width: 950px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px; 
+}
+
+h1:not(header h1), h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+/* --- СЕКЦІЯ HERO (ГОЛОВНА СТОРІНКА) --- */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eaf0f6;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.hero-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* СТИЛЬ КРАСИВОЇ КНОПКИ НА ГОЛОВНІЙ СТОРІНЦІ */
+.action-button {
+    background-color: #ffc107; 
+    color: #333;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+    text-transform: uppercase;
+}
+
+.action-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px); 
+    box-shadow: 0 7px 20px rgba(255, 193, 7, 0.6);
+}
+
+
+/* --- КАЛЬКУЛЯТОР (DELIVERY.HTML) --- */
+.calculator-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calculator-form input[type="number"],
+.calculator-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.calculator-form button {
+    background-color: #28a745; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.calculator-form button:hover {
+    background-color: #1e7e34;
+}
+
+#result {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* --- СТИЛІ ДЛЯ АДРЕС ВІДДІЛЕНЬ (LOCATIONS.HTML) --- */
+.location-list {
+    display: grid;
+    /* ЗМІНА: 5 колонок, як вимагалося */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px; /* Трохи менший проміжок, щоб помістити 5 колонок */
+    margin-top: 20px;
+}
+
+.location-card {
+    border: 1px solid #ddd;
+    padding: 10px; /* Зменшений паддинг для компактності */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.location-card h3 {
+    color: #0056b3;
+    font-size: 1.1em; /* Трохи менший шрифт для міста */
+    margin-top: 0;
+}
+.location-card p {
+    font-size: 0.85em; /* Менший шрифт для адреси */
+}
+
+
+/* --- ФУТЕР --- */
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
